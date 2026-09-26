@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrandForge AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=9" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <div class="brand-mark">B</div>
+          <div>
+            <span class="brand-name">BrandForge</span>
+            <small>AI strategy workspace</small>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="#workflow">Workflow</a>
+          <a href="#demo">Demo</a>
+          <a href="#about">About</a>
+          <button class="nav-auth-button" id="login-button">Log in</button>
+          <button class="nav-auth-button filled" id="signup-button">Sign up</button>
+        </nav>
+      </header>
+
+      <main class="landing-page" id="home">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Brand strategy workspace</p>
+            <h1>Turn an idea into a brand people remember.</h1>
+            <p class="subtitle">
+              BrandForge transforms rough ideas into clear positioning, brand identity,
+              messaging, and a validated brand system.
+            </p>
+            <div class="cta-row">
+              <button id="start-building" class="primary-button">Start building</button>
+              <button id="show-workflow" class="secondary-button">See how it works</button>
+            </div>
+            <div class="mini-proof">
+              <span>Discover</span>
+              <span>Position</span>
+              <span>Define</span>
+              <span>Express</span>
+              <span>Challenge</span>
+              <span>Deliver</span>
+            </div>
+
+          </div>
+          <div class="hero-panel">
+            <div class="panel-card">
+              <p class="card-label">Raw idea</p>
+              <h3>Hackathon team matching for students</h3>
+              <div class="stack">
+                <div class="bubble">Audience: students</div>
+                <div class="bubble">Need: clear team fit</div>
+                <div class="bubble">Outcome: stronger launch narrative</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="workflow-section" id="workflow">
+          <div class="section-heading">
+            <p class="eyebrow">Workflow</p>
+            <h2>From raw idea to launch-ready brand.</h2>
+          </div>
+          <div class="workflow-grid">
+            <div class="step-card"><span>01</span><h3>Discover</h3></div>
+            <div class="step-card"><span>02</span><h3>Position</h3></div>
+            <div class="step-card"><span>03</span><h3>Define</h3></div>
+            <div class="step-card"><span>04</span><h3>Express</h3></div>
+            <div class="step-card"><span>05</span><h3>Challenge</h3></div>
+            <div class="step-card"><span>06</span><h3>Deliver</h3></div>
+          </div>
+        </section>
+
+        <section class="principles-section" id="about">
+          <div class="principles-intro">
+            <p class="eyebrow">Why BrandForge</p>
+            <h2>Strategy that stays connected from first thought to final story.</h2>
+            <p>
+              Most creative tools generate isolated answers. BrandForge carries your
+              audience, problem, and positioning through every decision so the final
+              brand feels intentional.
+            </p>
+          </div>
+          <div class="principles-grid">
+            <article class="principle-card">
+              <span class="principle-number">01</span>
+              <h3>Context, not chaos</h3>
+              <p>Each stage builds on the last instead of starting from a blank prompt.</p>
+            </article>
+            <article class="principle-card">
+              <span class="principle-number">02</span>
+              <h3>Useful tension</h3>
+              <p>The Challenge stage looks for weak claims, contradictions, and generic language.</p>
+            </article>
+            <article class="principle-card">
+              <span class="principle-number">03</span>
+              <h3>Ready to use</h3>
+              <p>Finish with a clear brand system, launch plan, and exportable brief.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="demo-section" id="demo">
+          <div class="demo-card">
+            <div>
+              <p class="eyebrow">Built for the three-minute demo</p>
+              <h2>Bring the rough idea. Leave with a direction.</h2>
+              <p>See how a simple concept becomes a sharper promise, a distinctive identity, and a brand system your team can actually use.</p>
+            </div>
+            <button class="primary-button" id="demo-cta">Open demo project →</button>
+          </div>
+        </section>
+      </main>
+
+      <div class="workspace hidden" id="workspace">
+        <aside class="sidebar">
+          <div class="sidebar-header">
+            <div class="brand-mark">B</div>
+            <div>
+              <h2>BrandForge</h2>
+            </div>
+          </div>
+
+          <div class="project-label">Project</div>
+          <select class="project-picker" id="project-history" aria-label="Open saved project">
+            <option value="">Recent projects</option>
+          </select>
+          <button class="new-project-button" id="new-project">+ New project</button>
+          <ul class="stage-list" id="stage-list">
+            <li class="active"><span class="dot completed">✓</span> Discover</li>
+            <li><span class="dot">○</span> Position</li>
+            <li><span class="dot">○</span> Define</li>
+            <li><span class="dot">○</span> Express</li>
+            <li><span class="dot">○</span> Challenge</li>
+            <li><span class="dot">○</span> Deliver</li>
+            <li><span class="dot">○</span> Launch</li>
+          </ul>
+        </aside>
+
+        <section class="workspace-main">
+          <div class="dashboard-overview">
+            <div class="overview-copy">
+              <p class="eyebrow">Strategy workspace</p>
+              <h1>Build a brand with a point of view.</h1>
+              <p>Move from an unfinished idea to a clear, confident brand system through seven connected decisions.</p>
+            </div>
+            <div class="overview-stats">
+              <div class="overview-stat accent">
+                <span>Current project</span>
+                <strong id="overview-project">New brand project</strong>
+              </div>
+              <div class="overview-stat">
+                <span>Progress</span>
+                <strong id="overview-progress">0 / 7 stages</strong>
+              </div>
+              <div class="overview-stat">
+                <span>Strategy status</span>
+                <strong id="overview-status">Ready to begin</strong>
+              </div>
+            </div>
+          </div>
+          <div class="progress-track"><span id="overview-progress-bar"></span></div>
+
+          <div class="workspace-header">
+            <div>
+              <p class="eyebrow" id="stage-kicker">Stage 01</p>
+              <h2 id="stage-title">Discover</h2>
+            </div>
+            <div class="toolbar">
+              <button class="ghost-button" id="back-stage">← Back</button>
+              <button class="secondary-button" id="save-project">Save</button>
+              <button class="secondary-button" id="copy-project">Copy brief</button>
+              <button class="secondary-button" id="export-project">↓ Export brief</button>
+              <button class="primary-button" id="continue-stage">Continue →</button>
+            </div>
+          </div>
+
+          <div class="form-card" id="stage-form">
+            <div class="stage-description" id="stage-description"></div>
+            <div class="field-grid" id="field-grid"></div>
+          </div>
+
+          <div class="results-card hidden" id="results-card">
+            <div class="results-header">
+              <h3>AI-generated brand insight</h3>
+            </div>
+            <div id="results-content"></div>
+          </div>
+
+          <div class="error-card hidden" id="error-card"></div>
+
+          <div class="workspace-footer-grid">
+            <div class="footer-panel">
+              <span class="panel-kicker">BrandForge principle</span>
+              <h3>Clarity before polish.</h3>
+              <p>Every output stays connected to the audience, problem, and positioning you define at the start.</p>
+            </div>
+            <div class="footer-panel light-panel">
+              <span class="panel-kicker">Workflow signal</span>
+              <h3 id="workflow-signal">Your strategy is waiting for its first input.</h3>
+              <p>Use Continue to turn the current decision into a structured brand insight.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="auth-modal hidden" id="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+        <div class="auth-card">
+          <button class="auth-close" id="auth-close" aria-label="Close authentication dialog">×</button>
+          <p class="eyebrow">BrandForge account</p>
+          <h2 id="auth-title">Welcome back to BrandForge.</h2>
+          <p class="auth-subtitle" id="auth-subtitle">Log in to continue building your brand system.</p>
+          <form id="auth-form">
+            <div class="auth-name-field hidden">
+              <label for="auth-name">Your name</label>
+              <input id="auth-name" type="text" autocomplete="name" />
+            </div>
+            <label for="auth-email">Email</label>
+            <input id="auth-email" type="email" autocomplete="email" required />
+            <label for="auth-password">Password</label>
+            <input id="auth-password" type="password" minlength="8" autocomplete="current-password" required />
+            <button class="primary-button auth-submit" type="submit" id="auth-submit">Log in</button>
+          </form>
+          <div class="auth-error hidden" id="auth-error"></div>
+          <p class="auth-switch" id="auth-switch"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js?v=9"></script>
+  </body>
+</html>
