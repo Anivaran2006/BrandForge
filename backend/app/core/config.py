@@ -13,7 +13,10 @@ APP_ENV = os.getenv("APP_ENV", "development")
 API_TIMEOUT_SECONDS = float(os.getenv("API_TIMEOUT_SECONDS", "20"))
 CORS_ORIGINS = [
     origin.strip()
-    for origin in os.getenv("CORS_ORIGINS", "http://localhost:8001,http://127.0.0.1:8001").split(",")
+    for origin in os.getenv(
+        "CORS_ORIGINS",
+        "http://localhost:8001,http://127.0.0.1:8001",
+    ).split(",")
     if origin.strip()
 ]
 FRONTEND_DIR = BASE_DIR.parent / "frontend"

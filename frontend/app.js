@@ -1,4 +1,5 @@
-const API_URL = window.location.port === '8001' ? 'http://127.0.0.1:8000' : window.location.origin;
+const API_URL = window.BRANDFORGE_API_URL
+  || (window.location.port === '8001' ? 'http://127.0.0.1:8000' : window.location.origin);
 const DEMO_PROJECT = {
   idea: 'A platform that helps college students find the right teammates for hackathons.',
   audience: 'college students',

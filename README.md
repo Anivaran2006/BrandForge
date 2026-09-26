@@ -33,3 +33,21 @@ The application serves the frontend and API from the same origin. Set `CORS_ORIG
 ## Deploy on Render
 
 The included `render.yaml` uses the Dockerfile, exposes `/api/health` as the health check, and persists project data on a one-gigabyte disk. Set `CORS_ORIGINS` to a comma-separated list of trusted origins if needed.
+
+## Deploy the frontend on Vercel
+
+Deploy the `frontend` folder as a static Vercel project:
+
+1. Import this GitHub repository into Vercel.
+2. Set **Root Directory** to `frontend`.
+3. Leave the framework preset as **Other** and the build command empty.
+4. Edit `frontend/config.js` and set `window.BRANDFORGE_API_URL` to the public URL of the deployed FastAPI backend, for example `https://brandforge-api.onrender.com`.
+5. Commit that URL change and redeploy the frontend. Do not put credentials in this file.
+
+The backend must allow the Vercel URL through its `CORS_ORIGINS` environment variable. For example:
+
+```text
+https://brandforge.vercel.app
+```
+
+Deploy the backend separately using the included Dockerfile and `render.yaml`, then copy its public URL into Vercel.
